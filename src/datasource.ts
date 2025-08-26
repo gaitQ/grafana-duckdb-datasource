@@ -178,6 +178,9 @@ async function functions(): Promise<Aggregate[]> {
 export class DuckDBDataSource extends SqlDatasource {
   sqlLanguageDefinition: LanguageDefinition | undefined = undefined;
 
+  // Enable support for annotations
+  annotations = {};
+
   query(request: DataQueryRequest<SQLQuery>) {;
     const result = super.query(request);
     return result;
